@@ -20,8 +20,10 @@ Autoscale = $Autoscale
         Optional = True
 
         [[[configuration]]]
-#        cyclecloud.cluster.autoscale.idle_time_after_jobs = $IdleTimeAfterJobs
-#        cyclecloud.cluster.autoscale.idle_time_before_jobs = $IdleTimeBeforeJobs
+        cyclecloud.cluster.autoscale.idle_time_after_jobs = 600
+        cyclecloud.cluster.autoscale.idle_time_before_jobs = 600 
+        #cyclecloud.cluster.autoscale.idle_time_after_jobs = $IdleTimeAfterJobs
+        #cyclecloud.cluster.autoscale.idle_time_before_jobs = $IdleTimeBeforeJobs
 
     [[node master]]
     MachineType = $MasterMachineType
