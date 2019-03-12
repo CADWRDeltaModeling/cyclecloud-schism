@@ -1,8 +1,15 @@
 #!/bin/bash
 set -e
 set -x
-yum install -y bash-completion
+
 yum install -y gcc
-rpm --import https://yum.repos.intel.com/2019/setup/RPM-GPG-KEY-intel-psxe-runtime-2019
-rpm -Uhv https://yum.repos.intel.com/2019/setup/intel-psxe-runtime-2019-reposetup-1-0.noarch.rpm
-yum install -y intel-psxe-runtime
+
+INTEL_VER=2019.3-199
+# The ordering of the files follows dependencies.
+files="intel-psxe-common-runtime-${INTEL_VER}.noarch.rpm intel-comp-common-runtime-${INTEL_VER}.noarch.rpm intel-comp-runtime-64bit-${INTEL_VER}.x86_64.rpm intel-openmp-runtime-64bit-${INTEL_VER}.x86_64.rpm intel-mpi-runtime-64bit-${INTEL_VER}.x86_64.rpm intel-ifort-common-runtime-${INTEL_VER}.noarch.rpm intel-ifort-runtime-64bit-${INTEL_VER}.x86_64.rpm intel-icc-common-runtime-${INTEL_VER}.noarch.rpm intel-icc-runtime-64bit-${INTEL_VER}.x86_64.rpm"
+cd /tmp
+for f in $files; do
+  jetpack download $f /tmp/
+  rpm -i $f
+done
+
