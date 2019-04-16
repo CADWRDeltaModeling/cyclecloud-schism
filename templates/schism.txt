@@ -96,17 +96,17 @@ Autoscale = $Autoscale
 [parameters About]
 Order = 1
 
-    [[parameters About schism]]
+    [[parameters About SCHISM]]
 
-        [[[parameter schism]]]
+        [[[parameter SCHISM]]]
         HideLabel = true
         Config.Plugin = pico.widget.HtmlTemplateWidget
-        Config.Template = '''<p>Insert template description here</p>'''
+        Config.Template = '''<p>This cluster installs SCHISM on a cluster, including PBSPro scheduler.</p>'''
 
 [parameters Required Settings]
 Order = 10
 
-    [[parameters Virtual Machines ]]
+    [[parameters Virtual Machine]]
     Description = "The cluster, in this case, has two roles: the scheduler master-node with shared filer and the execute hosts. Configure which VM types to use based on the requirements of your application."
     Order = 20
 
@@ -120,13 +120,13 @@ Order = 10
         Label = Master VM Type
         Description = The VM type for scheduler master and shared filer.
         ParameterType = Cloud.MachineType
-        DefaultValue = Standard_D1_v2
+        DefaultValue = Standard_F4s_v2
 
         [[[parameter ExecuteMachineType]]]
         Label = Execute VM Type
         Description = The VM type for execute nodes
         ParameterType = Cloud.MachineType
-        DefaultValue = Standard_D1_v2
+        DefaultValue = Standard_H16r
         Config.Multiselect = true
 
 
