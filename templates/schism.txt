@@ -55,7 +55,6 @@ Autoscale = $Autoscale
         fs_type = ext4
         raid_level = 0
 
-
     [[node executedefaults]]
     Abstract = true
     MachineType = $ExecuteMachineType
@@ -120,7 +119,7 @@ Order = 10
         Label = Master VM Type
         Description = The VM type for scheduler master and shared filer.
         ParameterType = Cloud.MachineType
-        DefaultValue = Standard_F4s_v2
+        DefaultValue = Standard_F4s
 
         [[[parameter ExecuteMachineType]]]
         Label = Execute VM Type
