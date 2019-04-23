@@ -16,7 +16,7 @@ Autoscale = $Autoscale
     Region = $Region
     KeyPairLocation = ~/.ssh/cyclecloud.pem
     
-        [[[cluster-init schism:default:0.9.1]]]
+        [[[cluster-init schism:default:0.9.2]]]
         Optional = True
 
         [[[configuration]]]
@@ -34,7 +34,7 @@ Autoscale = $Autoscale
 
         [[[cluster-init cyclecloud/pbspro:master]]]
 
-        [[[cluster-init schism:master:0.9.1]]]
+        [[[cluster-init schism:master:0.9.2]]]
         Optional = True
 
         [[[network-interface eth0]]]
@@ -77,7 +77,7 @@ Autoscale = $Autoscale
 
         [[[cluster-init cyclecloud/pbspro:execute]]]
 
-        [[[cluster-init schism:execute:0.9.1]]]
+        [[[cluster-init schism:execute:0.9.2]]]
         Optional = True
 
         [[[network-interface eth0]]]
