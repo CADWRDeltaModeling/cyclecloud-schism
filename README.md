@@ -64,10 +64,10 @@ To import the cluster:
 
   2. Switch to the Slurm directory.
 
-  3. Run ``cyclecloud import_template SCISM -f templates/schism.txt``.  The
-     expected output looks like this:::
-
-       $ cyclecloud import_template Slurm -f templates/slurm_template.txt
+  3. Run ``cyclecloud import_template SCISM -f templates/schism.txt -c schism``.  The
+     expected output looks like this:
+```
+       $ cyclecloud import_template SCHISM -f templates/schism.txt -c schism
        Importing template SCHISM....
        ----------------------
        SCHISM : *template*
@@ -76,8 +76,8 @@ To import the cluster:
        Cluster nodes:
            master: off
        Total nodes: 1
-
-     Add ``--force`` option when repeating the import.
+```
+     Add ``--force`` option when repeating the import process to overwrite a template already imported.
 
 # License
 
