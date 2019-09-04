@@ -62,7 +62,7 @@ To import the cluster:
 
   1. Open a terminal session with the CycleCloud CLI enabled.
 
-  2. Switch to the Slurm directory.
+  2. Switch to the CycleCloud-SCHISM directory.
 
   3. Run ``cyclecloud import_template SCISM -f templates/schism.txt -c schism``.  The
      expected output looks like this:
