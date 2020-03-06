@@ -1,6 +1,6 @@
 #!/bin/bash
-# set -e
-# set -x
+set -e
+set -x
 # 
 # yum install -y gcc
 # 
@@ -13,3 +13,4 @@
 #   rpm -i $f
 # done
 
+touch /etc/sgi-release
