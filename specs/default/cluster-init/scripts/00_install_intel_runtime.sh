@@ -13,3 +13,4 @@ for f in $files; do
   rpm -i $f
 done
 
+touch /etc/sgi-release
