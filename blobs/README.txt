@@ -1,1 +1,0 @@
-This directory will holds binary packages for SCHISM CycleCloud cluster. Please download packages from the Release page and copy them here. Then untar intel tar ball, and run 'cyclecloud project upload' to copy the files to the Locker.
